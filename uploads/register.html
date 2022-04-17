@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting System-Registration</title>
+<link rel="stylesheet" href="../css/stylesheet.css">
+</head>
+<body>
+<style>
+#address {
+width: 25%;
+
+
+}
+#role{
+
+border: 2px solid black;
+border-radius: 5px;
+padding: 10px;
+width: 30%;
+}
+#role select{
+padding: 5px;
+border-radius: 5px;
+
+}
+#button{
+padding: 7px;
+border-radius: 5px;
+background-color: rgb(151, 211, 233);
+}
+</style>
+<div id="header"><
+<h1 ><p align="center">Online Voting System</h1></p>
+</div>
+<hr>
+<h2 >Registration</h2>    
+<input type="text" name="name" placeholder="Enter your name">
+<input type="number" name="phone" placeholder="Enter your number"><br><br>
+<input type="password" name="password" placeholder="Enter your password">
+<input type="password" name="cpassword" placeholder="Confirm password"><br><br>
+<input type="text" name="address" id="address" placeholder="Address here"><br><br>
+<center>
+<div id="role">
+Select Role:<select name="role"  >
+<option value="1">Voter</option>
+<option value="2">Candidate</option>
+</select>
+</div><br><br>
+<button type="submit" id="button">Register</button><br><br>
+Already an user? <a href="../index.html">Login Here</a>
+
+</body>
+</html>
