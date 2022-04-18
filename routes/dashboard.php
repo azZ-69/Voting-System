@@ -20,19 +20,35 @@
         <link rel="stylesheet" href="../css/stylesheet.css">
     </head>
     <body>
-        
+        <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>Dashboard</title>
+
+  </head>
+  <body>
+     <!-- <nav class="navbar navbar-lg navbar-dark bg-success">
+  <a class="navbar-brand" href="uploads/index.php" style="font-size:20px;"><strong>Voting system-Dashboard</strong></a>
+  -->
+<style>
+body {
+background-color:#9fd3c7;
+}
+</style>
+
             <center>
-            <div id="headerSection">
-            <a href="../"><button id="back-button"> Back</button></a>
-            <a href="logout.php"><button id="logout-button">Logout</button></a>
-            <h1>Online Voting System</h1>  
+             <div id="headerSection">
+             <a href="../"><button id="back-button"> Back</button></a>
+            <a href="logout.php"><button id="logout-button">Logout</button></a> 
+            <h1><strong>Online Voting System</strong></h1>   
+<p align="center"><strong>Post:President</strog></p>                          
             </div>
-            </center>
             <hr>
 
             <div id="mainSection">
                 <div id="profileSection">
-                    <center><img src="../uploads/<?php echo $data['photo']?>" height="100" width="100"></center><br>
+                    <center><img src="../uploads/<?php echo $data['photo']?>" height="100" width="150"></center><br>
                     <b>Name : </b><?php echo $data['name'] ?><br><br>
                     <b>Mobile : </b><?php echo $data['mobile'] ?><br><br>
                     <b>Address : </b><?php echo $data['address'] ?><br><br>
@@ -45,9 +61,11 @@
                         $groups = $_SESSION['groups'];
                         for($i=0; $i<count($groups); $i++){
                             ?>
-                                <div style="border-bottom: 1px solid #bdc3c7; margin-bottom: 10px">
+   
+   <div style="border-bottom: 1px solid #bdc3c7; margin-bottom: 10px">
+
                                 <img style="float: right" src="../uploads/<?php echo $groups[$i]['photo']?>" height="80" width="80">
-                                <b>Group Name : </b><?php echo $groups[$i]['name']?><br><br>
+                                <b>Candidate Name : </b><?php echo $groups[$i]['name']?><br><br>
                                 <b>Votes :</b> <?php echo $groups[$i]['votes']?><br><br>
                                 <form method="POST" action="../api/vote.php">
                                 <input type="hidden" name="gvotes" value="<?php echo $groups[$i]['votes'] ?>">
@@ -73,7 +91,7 @@
                     else{
                         ?>
                             <div style="border-bottom: 1px solid #bdc3c7; margin-bottom: 10px">
-                                <b>No groups available right now.</b>    
+                                <b>No candidates available right now.</b>    
                             </div>
                         <?php
                     }  
